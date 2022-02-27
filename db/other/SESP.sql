@@ -1,0 +1,1 @@
+select * from Especialidades where estadoEspecialidad = 1;

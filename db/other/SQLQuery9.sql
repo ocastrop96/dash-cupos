@@ -1,0 +1,1 @@
+select * from dbo.Pacientes where NroDocumento = '77478995'
