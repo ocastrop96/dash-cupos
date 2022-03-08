@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="dashboard">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="home">Inicio</a></li>
                         <li class="breadcrumb-item active">Página no Existente</li>
                     </ol>
                 </div>
@@ -23,7 +23,7 @@
 
                 <p>
                     No se pudo encontrar la página que solicitaste.
-                    Mientras tanto puedes <a href="dashboard">regresar al inicio o página principal</a>.
+                    Mientras tanto puedes <a href="home">regresar al inicio o página principal</a>.
                 </p>
             </div>
         </div>

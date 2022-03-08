@@ -81,34 +81,34 @@
 </head>
 
 <body class="hold-transition layout-top-nav">
-
+    
     <?php
     echo '<div class="wrapper"><div class="content-wrapper">';
     include "pages/header.php";
     if (isset($_GET["ruta"])) {
         if (
             $_GET["ruta"] == "home"
-        ) {
-            include "pages/" . $_GET["ruta"] . ".php";
+            ) {
+                include "pages/" . $_GET["ruta"] . ".php";
+            } else {
+                include "pages/404.php";
+            }
         } else {
-            include "pages/404.php";
+            include "pages/home.php";
         }
-    } else {
-        include "pages/home.php";
-    }
-    echo '</div>';
-    include('pages/footer.php');
-    echo '</div>';
-    ?>
+        echo '</div>';
+        include('pages/footer.php');
+        echo '</div>';
+        ?>
     <!-- Scripts JS Propios -->
-    <script type="text/javascript" src="public/js/consulta-cupos.js"></script>
     <!-- <script type="text/javascript" src="public/js/dashboard.js"></script>
     <script type="text/javascript" src="public/js/signin.js"></script>
     <script type="text/javascript" src="public/js/usuarios.js"></script>
     <script type="text/javascript" src="public/js/referencias.js"></script>
     <script type="text/javascript" src="public/js/reporte-general.js"></script> -->
-
+    
     <!-- Scripts JS Propios -->
+    <script type="text/javascript" src="public/js/consulta-cupos.js"></script>
 </body>
 
 </html>
