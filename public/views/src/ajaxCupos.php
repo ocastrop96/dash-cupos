@@ -6,9 +6,7 @@ class AjaxCuposDisponibles
     public $FechaBusqueda;
     public function ajaxListarCuposDisponibles()
     {
-
         $datoFecha = $this->FechaBusqueda;
-
         date_default_timezone_set('America/Lima');
 
         $fConsulta = $datoFecha;
@@ -21,7 +19,6 @@ class AjaxCuposDisponibles
 
         if ($totalListCupos > 0) {
             $dataRefsHTML = "";
-
             foreach ($listCupos as $key => $value) {
                 $dataRefsHTML .= "<div class='col-12 col-md-12 col-lg-6 col-xl-6'>
                 <div class='card card-info shadow-lg collapsed-card'>
@@ -54,7 +51,6 @@ class AjaxCuposDisponibles
                 $totalLisstProgramacion = count($listProgramacion);
 
                 if ($totalLisstProgramacion > 0) {
-
                     // SUMATORIA DE DISPONIBLES
                     $acumulado = 0;
                     foreach ($listProgramacion as $key3 => $value3) {
@@ -64,15 +60,14 @@ class AjaxCuposDisponibles
                             CargarTotalDisponible('contadorEspecialidad$especialidad',$acumulado)
                         </script>";
                     // SUMATORIA DE DISPONIBLES
+
                     foreach ($listProgramacion as $key2 => $value2) {
-                        //     $acumulado = array_sum($value2['cantidad']);
 
                         if ($value2["cantidad"] > 0) {
                             $botonCupos = "<button type='button' class='btn btn-success btn-block'><i class='fa fa-calendar-check'></i> &nbsp; $value2[cantidad]</button>";
                         } else {
                             $botonCupos = "<button type='button' class='btn btn-danger btn-block'><i class='fa fa-window-close'></i> &nbsp; $value2[cantidad]</button>";
                         }
-
                         $dataRefsHTML .= "<tr>
                             <td>" . ($key2 + 1) . "</td>
                             <td>" . strtoupper($value2['servicio']) . "</td>

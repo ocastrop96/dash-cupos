@@ -1,12 +1,5 @@
 -- LISTADO DE ESPECIALIDADES CON PROGRAMACION EN FECHA
-USE [SIGH]
-GO
-/****** Object:  StoredProcedure [dbo].[VISOR_CUPOS_WEB_ESPECIALIDADES]    Script Date: 08/03/2022 11:00:55 a. m. ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-ALTER PROCEDURE [dbo].[VISOR_CUPOS_WEB_ESPECIALIDADES] (@fecha date)
+CREATE PROCEDURE VISOR_CUPOS_WEB_ESPECIALIDADES (@fecha date)
 as
 SET DATEFORMAT ymd
 SELECT DISTINCT
@@ -36,23 +29,13 @@ GROUP BY
 	pm.horaInicio, 
 	pm.HoraFin, 
 	es.Nombre
---HAVING
---((DATEDIFF(minute, pm.horaInicio ,pm.HoraFin)-count(*)*pm.TiempoPromedioAtencion)/pm.TiempoPromedioAtencion) >=  0
 ORDER BY 
 es.Nombre ASC
 
 
+
 -- LISTADO DE CUPOS X SERVICIO EN BASE A FECHA Y ESPECIALIDAD
-
-
-USE [SIGH]
-GO
-/****** Object:  StoredProcedure [dbo].[Visor_CuposWeb]    Script Date: 08/03/2022 11:01:30 a. m. ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-ALTER procedure [dbo].[Visor_CuposWeb](@fecha DATE, @especialidad int)
+CREATE procedure Visor_CuposWeb (@fecha DATE, @especialidad int)
 AS
 BEGIN
 set DATEFORMAT ymd

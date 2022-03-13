@@ -1,3 +1,0 @@
-exec LISTAR_DATOS_CUENTA_PSICO @IdCuentaAtencion = 1901018;
-
-exec LISTAR_DATOS_CUENTA_PSICO_FORM @IdCuentaAtencion = 1901018, @IdEpisodio = 451699;

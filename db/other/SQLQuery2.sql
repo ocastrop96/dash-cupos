@@ -1,1 +1,0 @@
-select * from Citas where IdAtencion = 2002499;
